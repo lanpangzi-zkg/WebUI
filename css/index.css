@@ -1,0 +1,171 @@
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src:url("../font/fontawesome-webfont.eot") format("eot"),
+      url("../font/fontawesome-webfont.svg") format("svg"),
+      url("../font/fontawesome-webfont.ttf") format("truetype"),
+      url("../font/fontawesome-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+    font:14px/1.5  "Microsoft Yahei","WenQuanYi Micro Hei","sans-serif";
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+ul li{
+    list-style: none;
+}
+.header{
+    padding: 2em;
+    background-color: #b85977;
+    color: #ffffff;
+}
+.main{
+    width:1024px;
+    margin:0 auto;
+    padding: 2em 0;
+}
+
+/************menu**************/
+.menu-aside{
+    position: relative;
+    float: left;
+    width: 300px;
+}
+.menu{
+    border: 1px solid #eee;
+    border-bottom: none;
+    border-radius: 0.2em;
+    background-color: #e5b897;
+}
+.menu .menu-item{
+    position: relative;
+    text-align: center; 
+    border-bottom: 1px solid #eee; 
+    color: #ffffff;
+    overflow: hidden;
+}
+.menu-direction{
+    font-family: FontAwesome;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    transition:all ease 0.3s;
+}
+.menu-direction:before{
+    content: "\f105";
+    display: inline-block;
+}
+.menu-item.active .menu-direction{
+    transform:rotate(90deg);
+}
+/*.menu-item-bg{
+    position: absolute;
+    left: 0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background-color: #000;
+    opacity: 0;
+    border-radius: 50%;
+}
+.menu-item.active .menu-item-bg{
+    animation:menuAnim 0.3s ease 0s both;
+}*/
+.menu-name{
+    display: inline-block;
+    font-size: 1.5em;
+    line-height: 2;
+    cursor: pointer;
+    color: inherit;
+}
+.menu-name:hover{
+    color: red;
+}
+.menu-name:hover+i{
+    color: red;
+}
+.sub-menu{
+    display: none;
+}
+.sub-menu-item{
+
+}
+.sub-menu-name{
+    transition:all ease 0.3s;
+}
+.sub-menu-name:hover{
+    padding-left:10px;
+}
+.active{
+    display: block;
+}
+.btn{
+    background-color: cadetblue;
+    line-height: 2;
+    border-radius: .2em;
+    border: 1px solid #327577;
+    color: #ffffff;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: blue;
+}
+/************content**************/
+.content{
+    position: relative;
+    margin-left: 320px;
+}
+.section{
+    border: 1px solid #eee;
+    background-color: #fbfbfb;
+    border-radius: 0.2em;
+}
+.section-title{
+    line-height: 3;
+    background-color: #618caf;
+    color: #ffffff;
+    font-size: 125%;
+    padding: 0 1em;
+}
+.section-main{
+    padding: 1em;
+}
+.section-main .panel{
+    margin: 1em 0;
+}
+.section-main .view{
+
+}
+.section-main .code{
+    background-color: khaki;
+}
+
+/**************animation***************/
+@keyframes menuAnim{
+    0%{
+        transform:scale(0);
+    }
+    80%{
+        transform:scale(2);
+    }
+    100%{
+        opacity: 0;
+    }
+}
