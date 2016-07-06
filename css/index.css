@@ -55,24 +55,53 @@ a{
     display: block;
     clear: both;
 }
+/************header**************/
 .header{
-    padding: 2em;
     background-color: #b85977;
     color: #ffffff;
+}
+.nav{
+    position: fixed;
+    height: 50px;
+    width:100%;
+    z-index: 99;
+    background-color: #da6565;
+}
+.header-bg{
+    position: fixed;
+    width:100%;
+    top:50px;
+    z-index: 9;
+    background-color: #000000;
+}
+.header-title{
+    padding: 4em 0;
+    text-align: center;
+    line-height: 2em;
+    font-size: 150%;
+}
+.container{
+    position: relative;
+    top: 280px;
+    z-index: 98;
+    background-color: #ffffff;
 }
 .main{
     position: relative;
     width:1024px;
     margin:0 auto;
-    padding: 2em 0;
+    padding: 4em 0 2em 0;
 }
 
 /************menu**************/
 .menu-aside{
-    position: absolute;
-    left:0;
-    top:28px;
+    position: relative;
+    float:left;
     width: 300px;
+}
+.menu-aside-fixed{
+    position: fixed;
+    top: 95px;
 }
 .menu{
     border: 1px solid #eee;
@@ -162,6 +191,7 @@ a{
     margin-left: 320px;
 }
 .section{
+    margin-bottom: 2em;
     border: 1px solid #eee;
     background-color: #fbfbfb;
     border-radius: 0.2em;
