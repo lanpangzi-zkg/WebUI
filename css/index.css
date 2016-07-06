@@ -61,6 +61,7 @@ a{
     color: #ffffff;
 }
 .main{
+    position: relative;
     width:1024px;
     margin:0 auto;
     padding: 2em 0;
@@ -68,8 +69,9 @@ a{
 
 /************menu**************/
 .menu-aside{
-    position: relative;
-    float: left;
+    position: absolute;
+    left:0;
+    top:28px;
     width: 300px;
 }
 .menu{
@@ -81,23 +83,29 @@ a{
 .menu .menu-item{
     position: relative;
     text-align: center; 
-    border-bottom: 1px solid #eee; 
+    border-bottom: 1px solid #ffffff; 
     color: #ffffff;
     overflow: hidden;
+    cursor: pointer;
+    transition:background ease 0.3s;
 }
-.menu-direction{
+.menu .menu-item:hover{
+    background-color: bisque;
+    color: red;
+}
+.menu-arrow{
     font-family: FontAwesome;
     position: absolute;
     right: 1em;
     top: 1em;
-    transition:all ease 0.3s;
+    animation:arrowUpAnim 0.3s ease 0s both;
 }
-.menu-direction:before{
+.menu-arrow:before{
     content: "\f105";
     display: inline-block;
 }
-.menu-item.active .menu-direction{
-    transform:rotate(90deg);
+.arrow-down{
+    animation:arrowDownAnim 0.3s ease 0s both;
 }
 /*.menu-item-bg{
     position: absolute;
@@ -118,14 +126,7 @@ a{
     display: inline-block;
     font-size: 1.5em;
     line-height: 2;
-    cursor: pointer;
     color: inherit;
-}
-.menu-name:hover{
-    color: red;
-}
-.menu-name:hover+i{
-    color: red;
 }
 .sub-menu{
     display: none;
@@ -141,6 +142,7 @@ a{
 }
 .active{
     display: block;
+    background-color: bisque;
 }
 .btn{
     background-color: cadetblue;
@@ -194,5 +196,21 @@ a{
     }
     100%{
         opacity: 0;
+    }
+}
+@keyframes arrowUpAnim{
+    0%{
+        transform:rotate(90deg);
+    }
+    100%{
+        transform:rotate(0);
+    }
+}
+@keyframes arrowDownAnim{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform:rotate(90deg);
     }
 }

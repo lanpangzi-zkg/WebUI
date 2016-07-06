@@ -1,21 +1,21 @@
 $(document).ready(function() {
-    $("#menu").on("click", function(e) {
-        if (getNodeNode(e.target) == "span") {
-            slideSubMenu($(e.target).next());
-        }
-        toggleMenuClass($(e.target).parent());
-    });
+    init();
 });
-
-function getNodeNode(node) {
-    return !!node.nodeName ? node.nodeName.toLowerCase() : "";
+function init(){
+   $("#menu>.menu-item").on("click", function(e) {
+        var _this = $(this);
+        slideSubMenu(_this.find(".sub-menu"));
+        toggleMenuClass(_this);
+    }); 
+   $(window).on("scroll",function(){
+    console.log($(window).scrollTop());
+   });
 }
-
 function slideSubMenu(sub_menu) {
     if (!sub_menu) {
         return;
     }
-    if (sub_menu.css("display") == "block") {
+    if (isVisible(sub_menu)) {
         sub_menu.slideUp("fast");
     } else {
         sub_menu.slideDown("fast");
@@ -23,5 +23,9 @@ function slideSubMenu(sub_menu) {
 }
 
 function toggleMenuClass(_parent) {
+    _parent.find(".menu-arrow").toggleClass("arrow-down");
     _parent.toggleClass("active").siblings().removeClass("active");
+}
+function isVisible($ele){
+    return $ele.css("display")=="block";
 }
