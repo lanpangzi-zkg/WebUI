@@ -82,7 +82,7 @@ a{
 }
 .container{
     position: relative;
-    top: 280px;
+    top: 270px;
     z-index: 98;
     background-color: #ffffff;
 }
@@ -107,7 +107,7 @@ a{
     border: 1px solid #eee;
     border-bottom: none;
     border-radius: 0.2em;
-    background-color: #e5b897;
+    background-color: #ef9a9a;
 }
 .menu .menu-item{
     position: relative;
@@ -198,8 +198,8 @@ a{
 }
 .section-title{
     line-height: 3;
-    background-color: #618caf;
-    color: #ffffff;
+    background-color: #dadada;
+    color: #333;
     font-size: 125%;
     padding: 0 1em;
 }
@@ -213,7 +213,7 @@ a{
 
 }
 .section-main .code{
-    background-color: khaki;
+    background-color: #f5f4f2;
 }
 
 /**************animation***************/

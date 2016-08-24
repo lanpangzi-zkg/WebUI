@@ -8,7 +8,7 @@ function init(){
         toggleMenuClass(_this);
     }); 
    $(window).on("scroll",function(){
-    //console.log($(window).scrollTop());
+    // console.log($(window).scrollTop());
     if($(window).scrollTop()>=230){
         $(".menu-aside").addClass("menu-aside-fixed");
     }
